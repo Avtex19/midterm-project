@@ -15,7 +15,7 @@ This project introduces an innovative way to learn with flashcards by combining 
 * **Abstract Data Types (ADTs):** Key data structures, such as the `Card` object, were designed as ADTs with clearly defined Abstraction Functions (AF), Representation Invariants (RI), and `checkRep()` methods implemented to maintain data integrity.
 * **Safety from Rep Exposure (SRE):** Careful consideration was given to prevent the internal representation of ADTs from being exposed, ensuring data integrity and preventing unintended modifications.
 * **Easy to Understand (ETU):** The codebase is written with clarity in mind, utilizing consistent naming conventions, clear code formatting (likely using a tool like Prettier), and comments to explain complex logic. The use of TypeScript's static typing enhances readability and maintainability.
-* **Ready for Change (RFC):** The modular design of the application allows for easier modification and extension of features in the future. The separation of concerns between the frontend, backend, and database minimizes the impact of changes in one area on others.
+* **Ready for Change (RFC):** The modular design of the application allows for easier modification and extension of features in the future. The separation of concerns between the frontend and backend minimizes the impact of changes in one area on others.
 * **Git Usage:** A consistent Git workflow was followed, with frequent, well-documented commits that illustrate the step-by-step development process. Branches were used to isolate features and bug fixes.
 
 ## Installation and Setup
