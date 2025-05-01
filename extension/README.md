@@ -1,3 +1,4 @@
+```bash
 This innovative browser extension empowers you to seamlessly transform any text encountered online into study-ready flashcards within your preferred Flashcards application.
 
 Core Functionalities
@@ -67,4 +68,5 @@ content.js, content.css: The content.js script is injected into every webpage yo
 background.js: This script runs in the background of your browser and manages events and communication between the different parts of the extension, such as handling requests from the content script or the popup.
 Building the Extension
 
-This extension is built using fundamental web technologies: HTML for structure, CSS for styling, and JavaScript for functionality. Therefore, there is no formal build process required. You can directly load the unpacked extension into your browser as described in the installation 
+This extension is built using fundamental web technologies: HTML for structure, CSS for styling, and JavaScript for functionality. Therefore, there is no formal build process required. You can directly load the unpacked extension into your browser as described in the installation
+```
