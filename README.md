@@ -3,7 +3,7 @@
 This directory contains the frontend code for a web application focused on hand tracking practice. Built with React and TypeScript, it provides interactive exercises utilizing camera input for hand pose estimation.
 
 ## Project Structure
-
+```bash
 frontend/
 ├── src/
 │   ├── components/
@@ -23,8 +23,7 @@ frontend/
 │   ├── index.tsx                   # Entry point for rendering the React application
 │   └── main.tsx                    # Another potential entry point or related setup
 └── node_modules/                 # Node.js dependencies (not shown in detail)
-
-
+```
 ### `src/`
 
 This directory houses the main source code of the frontend application.
