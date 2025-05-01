@@ -1,78 +1,58 @@
-# Flashcards Browser Extension
+Flashcards Extension for Browsers
 
-This browser extension allows you to easily add flashcards from any webpage to your Flashcards application.
+This browser extension lets you easily capture text from any webpage and create flashcards in your Flashcards app.
 
-## Features
+Key Features
 
-- **Text Selection**: Select any text on a webpage and add it as a flashcard
-- **Floating Button**: A convenient floating button appears when you select text
-- **Context Menu**: Right-click on selected text to add it as a flashcard
-- **Quick Add**: Add cards with front, back, hint, and tags
-- **Recent Cards**: View your recently added cards
-- **Backend Integration**: Seamlessly integrates with your Flashcards backend
+Text Highlighting: Select any text on a webpage and add it directly as a flashcard.
+Floating Action Button: A floating button appears when text is selected, making it easy to add content as a flashcard.
+Context Menu Option: Right-click on selected text to quickly add it as a flashcard.
+Quick Card Creation: Add a flashcard with a front, back, optional hint, and tags.
+Recent Flashcards: Access a list of your recently created flashcards.
+Backend Integration: Effortlessly syncs with your Flashcards app backend.
+Installation Instructions
 
-## Installation
+For Chrome/Edge/Brave
+Download or clone this repository.
+In your browser, go to the extensions page:
+Chrome: chrome://extensions/
+Edge: edge://extensions/
+Brave: brave://extensions/
+Enable "Developer Mode" by toggling the switch in the top-right corner.
+Click "Load Unpacked" and select the extension directory from the repository.
+For Firefox
+Download or clone this repository.
+Open Firefox and go to about:debugging#/runtime/this-firefox.
+Click "Load Temporary Add-on" and select the manifest.json file from the extension folder.
+How to Use
 
-### Chrome/Edge/Brave
+Adding Flashcards
+Method 1 - Text Selection:
+Highlight any text on the webpage.
+A floating button titled "Add to Flashcards" will appear.
+Click the button to open the popup with the highlighted text automatically filled in.
+Method 2 - Context Menu:
+Highlight the desired text on the page.
+Right-click and choose "Add to Flashcards" from the context menu.
+The popup opens with the highlighted text already filled in.
+Method 3 - Extension Popup:
+Click on the extension icon in your browser's toolbar.
+Manually enter the flashcard's front and back content.
+Creating a Flashcard
+In the popup, the "Front" field will be pre-populated if you highlighted text.
+Enter the "Back" (answer or additional information) for the flashcard.
+Optionally, add a hint and tags (comma-separated).
+Click "Save Card" to create and store the flashcard.
+Configuration
 
-1. Download or clone this repository
-2. Open your browser and navigate to the extensions page:
-   - Chrome: `chrome://extensions/`
-   - Edge: `edge://extensions/`
-   - Brave: `brave://extensions/`
-3. Enable "Developer mode" (toggle in the top-right corner)
-4. Click "Load unpacked" and select the `extension` folder from this repository
+By default, the extension connects to the Flashcards backend at http://localhost:3001. If your backend is hosted at a different URL, you can modify the URL in the extension settings.
 
-### Firefox
+Development Guide
 
-1. Download or clone this repository
-2. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`
-3. Click "Load Temporary Add-on" and select the `manifest.json` file from the `extension` folder
-
-## Usage
-
-### Adding a Flashcard from a Webpage
-
-1. **Method 1 - Text Selection**:
-
-   - Select any text on a webpage
-   - A floating "Add to Flashcards" button will appear
-   - Click the button to open the popup with the selected text pre-filled
-
-2. **Method 2 - Context Menu**:
-
-   - Select any text on a webpage
-   - Right-click and select "Add to Flashcards" from the context menu
-   - The popup will open with the selected text pre-filled
-
-3. **Method 3 - Extension Popup**:
-   - Click the extension icon in your browser toolbar
-   - Manually enter the front and back of the flashcard
-
-### Creating a Flashcard
-
-1. In the popup, the "Front" field will be pre-filled if you selected text
-2. Enter the "Back" of the flashcard (the answer)
-3. Optionally add a hint and tags (comma-separated)
-4. Click "Save Card" to add the flashcard
-
-## Configuration
-
-The extension connects to the Flashcards backend at `http://localhost:3001` by default. If your backend is running on a different URL, you can change it in the extension settings.
-
-## Development
-
-### Project Structure
-
-- `manifest.json`: Extension configuration
-- `popup.html` & `popup.css` & `popup.js`: The extension popup UI
-- `content.js` & `content.css`: Scripts that run on web pages
-- `background.js`: Background service worker
-
-### Building from Source
-
-No build step is required. The extension uses plain HTML, CSS, and JavaScript.
-
-## License
-
-This extension is part of the Flashcards project and is subject to the same license terms.
+Project Files
+manifest.json: Configuration file for the extension.
+popup.html, popup.css, popup.js: UI and logic for the popup interface.
+content.js, content.css: Scripts and styles that interact with the web pages.
+background.js: Background service worker handling communication between scripts.
+Building the Extension
+No build process is needed. The extension is developed using vanilla HTML, CSS, and JavaScript.
