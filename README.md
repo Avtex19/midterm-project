@@ -1,79 +1,43 @@
-# Frontend for Hand Tracking Practice App
-
-This directory contains the frontend code for a web application focused on hand tracking practice. Built with React and TypeScript, it provides interactive exercises utilizing camera input for hand pose estimation.
-
-## Project Structure
-
-frontend/
-├── src/
-│   ├── components/
-│   │   ├── HandPoseCamera.tsx      # Component for capturing camera feed and displaying hand pose
-│   │   ├── PracticeView.module.css # CSS Modules for the PracticeView component
-│   │   └── PracticeView.tsx        # Main view for practice exercises
-│   ├── types/
-│   │   ├── index.ts                # Potentially defines shared TypeScript types
-│   │   └── utils.ts                # Could define utility-related types
-│   ├── utils/
-│   │   ├── handpose.ts             # Logic related to hand pose estimation
-│   │   ├── handVisualizer.ts       # Functions for visualizing the detected hand pose
-│   ├── api.ts                  # Functions for making API calls (if any)
-│   ├── App.css                     # Global styles for the application
-│   ├── App.tsx                     # Root component of the application
-│   ├── index.css                   # General styles applied to the main HTML
-│   ├── index.tsx                   # Entry point for rendering the React application
-│   └── main.tsx                    # Another potential entry point or related setup
-└── node_modules/                 # Node.js dependencies (not shown in detail)
 
 
-### `src/`
+#  Flashcards with Hand Gesture Interaction
 
-This directory houses the main source code of the frontend application.
+## Overview
 
-#### `components/`
+This project introduces an innovative way to learn with flashcards by combining the convenience of a browser extension for effortless card creation with the engaging interactivity of hand gesture recognition for card evaluation. As a solo effort, this project emphasizes the application of sound software engineering principles throughout its development, from initial design to deployment.
 
-Contains reusable UI components.
 
-* `HandPoseCamera.tsx`: This component likely handles accessing the user's camera feed and uses a hand tracking library to detect hand poses. It probably renders the camera stream and overlays the visual representation of the detected hands.
-* `PracticeView.module.css`: Contains the local styles specific to the `PracticeView` component, likely using CSS Modules to avoid naming conflicts.
-* `PracticeView.tsx`: This is likely the main screen where users engage in hand tracking practice exercises. It might utilize the `HandPoseCamera` component and present tasks or feedback related to hand movements.
+## Engineering Principles Demonstrated
 
-#### `types/`
 
-Likely contains TypeScript definition files for custom types and interfaces used throughout the application.
+* **Specification:** A detailed specification outlining the functionality of each component was created prior to development. This includes the API endpoints, database schema, and the logic for hand gesture interpretation.
+* **Testing:** Comprehensive unit tests were written using `[Your Testing Framework]` to ensure the reliability of individual modules and functions. These tests cover critical aspects like data handling, API responses, and gesture recognition logic.
+* **Abstract Data Types (ADTs):** Key data structures, such as the `Card` object, were designed as ADTs with clearly defined Abstraction Functions (AF), Representation Invariants (RI), and `checkRep()` methods implemented to maintain data integrity.
+* **Safety from Rep Exposure (SRE):** Careful consideration was given to prevent the internal representation of ADTs from being exposed, ensuring data integrity and preventing unintended modifications.
+* **Easy to Understand (ETU):** The codebase is written with clarity in mind, utilizing consistent naming conventions, clear code formatting (likely using a tool like Prettier), and comments to explain complex logic. The use of TypeScript's static typing enhances readability and maintainability.
+* **Ready for Change (RFC):** The modular design of the application allows for easier modification and extension of features in the future. The separation of concerns between the frontend, backend, and database minimizes the impact of changes in one area on others.
+* **Git Usage:** A consistent Git workflow was followed, with frequent, well-documented commits that illustrate the step-by-step development process. Branches were used to isolate features and bug fixes.
 
-* `index.ts`: Could export various type definitions used across different modules.
-* `utils.ts`: Might define types specifically related to utility functions or data structures.
+## Installation and Setup
 
-#### `utils/`
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/Avtex19/midterm-project]
+    cd [midterm-project]
+    ```
 
-Contains utility functions and modules that provide specific functionalities.
+2.  **Backend Setup:**
+    * Navigate to the backend directory: `cd backend`
+    * Install dependencies: `npm install` or `yarn install`
+    * Start the backend server.
 
-* `handpose.ts`: Likely includes the core logic for interacting with a hand pose estimation library (e.g., TensorFlow.js Handpose).
-* `handVisualizer.ts`: Functions in this file probably take hand pose data and generate visual elements (e.g., drawing points and lines on a canvas) to represent the detected hands.
-* `api.ts`: If the application communicates with a backend, this file would likely contain functions for making API requests.
+3.  **Browser Extension Installation:**
+    * Open Google Chrome (or a Chromium-based browser).
+    * Go to `chrome://extensions/`.
+    * Enable "Developer mode."
+    * Click "Load unpacked" and select the `extension` directory from your project.
 
-#### Root Level `src/` Files
+## Usage
 
-* `App.css`: Contains global CSS rules that apply to the entire application.
-* `App.tsx`: The root component that sets up the main layout and routing of the application.
-* `index.css`: Provides basic styles for the main HTML document.
-* `index.tsx`: The entry point where the React application is mounted to the DOM (typically using `ReactDOM.render`).
-* `main.tsx`: This could be another entry point or a file involved in the initial setup of the application, potentially related to different rendering environments or configurations.
-
-## Technologies Used
-
-* React
-* TypeScript
-* Potentially: CSS Modules, a hand tracking library (like TensorFlow.js Handpose), and other utility libraries.
-
-## Getting Started
-
-To run this frontend locally, you'll typically need to:
-
-1.  Ensure you have Node.js and npm (or yarn) installed.
-2.  Navigate to the root directory of your project in the terminal.
-3.  Install dependencies: `npm install`.
-4.  Start the development server: `npm start`.
-
-This should open the application in your web browser.
-
+1.  **Creating Flashcards:** Highlight text on any webpage and click the extension icon. Follow the prompts in the popup to save the text as a flashcard.
+2.  **Reviewing Flashcards:** Open the extension popup to view flashcards. With your webcam enabled and permission granted, use the specified hand gestures to indicate whether you found the card "Easy," "Wrong," or "Hard."
