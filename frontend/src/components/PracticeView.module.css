@@ -1,0 +1,149 @@
+/* practiceView.module.css */
+.practice-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.day-counter {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-counter {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.flashcard {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    text-align: center;
+}
+
+.flashcard-back {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.difficulty-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.gesture-instructions {
+    font-size: 14px;
+    color: #666;
+}
+
+.gesture-instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gesture-instructions li {
+    margin: 5px 0;
+}
+
+.session-finished {
+    text-align: center;
+    padding: 20px;
+}
+
+.session-finished .btn {
+    margin-top: 20px;
+}
+
+.loading {
+    text-align: center;
+    font-size: 18px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+}
+
+.camera-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 325px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.video-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+button.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button.btn-sm {
+    padding: 6px 12px;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.btn-primary {
+    background-color: #2980b9;
+}
+
+.btn-primary:hover {
+    background-color: #3498db;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+}
+
